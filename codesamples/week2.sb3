@@ -1,0 +1,45 @@
+#### Average temperature
+Define GetAverage(Scores)
+  Set index to 1
+  Set sum to 0
+
+  Repeat until index = length of Scores
+    Change sum by item index of Scores
+    Change index by 1
+
+  Set average to sum / length of Scores
+  Say "Average is " + average
+
+
+#### Best (Maximum) score
+Define GetMaximum(Scores)
+  Set index to 1
+  Set result to item 1 of Scores
+
+  Repeat until index = length of Scores
+    Change index by 1
+    Set current_score to item index of Scores
+
+    If result < current_score
+      Set result to current_score
+
+  Say "Best score is " + result
+
+#### Worst (Minimum) score
+Define GetMinimum(Scores)
+  Set index to 1
+  Set result to item 1 of Scores
+
+  Repeat until index = length of Scores
+    Change index by 1
+    Set current_score to item index of Scores
+
+    If result > current_score
+      Set result to current_score
+
+  Say "Worst score is " + result
+
+Create list Scores with 10 elements
+
+Call GetMinimum(Scores)
+Call GetMaximum(Scores)
